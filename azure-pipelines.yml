@@ -9,6 +9,10 @@ trigger:
 pool:
   vmImage: "ubuntu-latest"
 
+# define variables to use during the build
+variables:
+  buildOutputFolder: 'dist'
+
 steps:
   - task: NodeTool@0
     inputs:
@@ -19,6 +23,15 @@ steps:
       npm install
       npm run build
     displayName: "npm install and build"
+
+  ## Copy the client to the staging directory
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: '$(buildOutputFolder)' 
+    contents: '**/*' 
+    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    cleanTargetFolder: true
+
   - task: ArchiveFiles@2
     inputs:
       rootFolderOrFile: "$(Build.BinariesDirectory)/dist/"
