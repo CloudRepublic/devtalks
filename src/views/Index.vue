@@ -4,7 +4,9 @@
     <parallax class="section page-header header-filter" :style="headerStyle">
       <div class="container">
         <div class="md-layout">
-          <div class="md-layout-item md-size-40 md-small-size-70 md-xsmall-size-100">
+          <div
+            class="md-layout-item md-size-40 md-small-size-70 md-xsmall-size-100"
+          >
             <img
               :src="logo"
               alt="Raised Image"
@@ -12,7 +14,9 @@
               :class="{ 'responsive-image': responsive }"
             />
           </div>
-          <div class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100 podcast-header">
+          <div
+            class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100 podcast-header"
+          >
             <h1 class="title">Dev Talks</h1>
             <h4>
               In deze podcast bespreken we de laatste trends op het gebied van
@@ -32,12 +36,21 @@
       <div class="section">
         <div class="container">
           <div class="md-layout">
-            <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center">
+            <div
+              class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
+            >
               <h2 class="title text-center">Afleveringen</h2>
 
               <div class="episodes">
-                <vue-element-loading :active="episodeLoading" spinner="bar-fade-scale" />
-                <div v-for="episode in episodes" :key="episode.guid" class="episode">
+                <vue-element-loading
+                  :active="episodeLoading"
+                  spinner="bar-fade-scale"
+                />
+                <div
+                  v-for="episode in episodes"
+                  :key="episode.guid"
+                  class="episode"
+                >
                   <div class="player">
                     <aplayer
                       theme="#2b557d"
@@ -57,8 +70,13 @@
                       slot="view-more"
                       slot-scope="{ toggle, collapsed }"
                       @click="toggle"
-                    >{{ collapsed ? "Toon meer" : "Toon minder" }}</p>
-                    <div class="description text-left" v-html="episode.content"></div>
+                    >
+                      {{ collapsed ? "Toon meer" : "Toon minder" }}
+                    </p>
+                    <div
+                      class="description text-left"
+                      v-html="episode.content"
+                    ></div>
                   </foldable>
                 </div>
               </div>
@@ -67,7 +85,10 @@
         </div>
       </div>
     </div>
-    <listen-modal :show="showListenModal" @hide="showListenModal = false"></listen-modal>
+    <listen-modal
+      :show="showListenModal"
+      @hide="showListenModal = false"
+    ></listen-modal>
   </div>
 </template>
 

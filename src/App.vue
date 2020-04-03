@@ -12,11 +12,10 @@
 <script>
 export default {
   mounted() {
-    if (window.location.protocol !== "https") {
-      window.location.href = `https://${window.location.host}`;
+    if (window.location.hostname === "devtalks.nl") {
+      window.location.href = `https://www.devtalks.nl${window.location.pathname}`;
     }
   }
 };
 </script>
-
 <style lang="scss" scoped></style>
