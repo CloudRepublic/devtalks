@@ -54,6 +54,7 @@
                   <div class="player">
                     <aplayer
                       theme="#2b557d"
+                      preload='none'
                       :mini="true"
                       :music="{
                         title: episode.title,
