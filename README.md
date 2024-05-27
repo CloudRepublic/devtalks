@@ -1,3 +1,5 @@
+[![Azure Static Web Apps CI/CD](https://github.com/CloudRepublic/devtalks/actions/workflows/azure.yml/badge.svg)](https://github.com/CloudRepublic/devtalks/actions/workflows/azure.yml)
+
 # DevTalks.nl
 This repository contains the Vue website for DevTalks.nl
 Its a simple Vue based single page application written by [Florian Schaal](https://github.com/fschaal) and edited by [Dibran Mulder](https://github.com/DibranMulder)
