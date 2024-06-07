@@ -14,7 +14,7 @@
   "dependencies": {
     "@inotom/vue-go-top": "^1.2.0",
     "axios": "^0.19.2",
-    "core-js": "3.5.0",
+    "core-js": "^3.37.1",
     "nouislider": "14.1.0",
     "rss-parser": "^3.7.5",
     "v-tooltip": "2.0.2",
@@ -39,11 +39,11 @@
     "eslint": "6.7.2",
     "eslint-plugin-prettier": "3.1.1",
     "eslint-plugin-vue": "6.0.1",
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8",
     "prettier": "1.19.1",
     "sass": "1.23.7",
     "sass-loader": "8.0.0",
-    "vue-template-compiler": "2.6.10",
-    "gulp": "4.0.2",
-    "gulp-append-prepend": "1.0.8"
+    "vue-template-compiler": "2.6.10"
   }
 }
